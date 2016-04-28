@@ -6,7 +6,7 @@
   "mongodb": {
     "host": "127.0.0.1",
     "port": 27017,
-    "database": "test_sorting",
+    "database": "test_roles",
     "name": "mongodb",
     "connector": "mongodb"
   }
