@@ -1,0 +1,42 @@
+{
+  "name": "NcUser",
+  "plural": "users",
+  "base": "User",
+  "idInjection": true,
+  "activateLookup": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "isBackendUser": {
+      "type": "boolean",
+      "default": false
+    },
+    "userId": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "roles": {
+      "type": "hasMany",
+      "model": "NcRole",
+      "through": "RoleMapping",
+      "foreignKey": "principalId",
+      "keyThrough": "roleId",
+      "properties": {
+        "lookup": {
+          "localField": "userId"
+        }
+      }
+    }
+  },
+  "acls": [{
+    "accessType": "*",
+    "principalType": "ROLE",
+    "principalId": "$everyone",
+    "permission": "DENY"
+  }],
+  "methods": {},
+  "defaultPermission": "DENY"
+}

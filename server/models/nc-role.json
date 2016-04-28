@@ -1,0 +1,28 @@
+{
+  "name": "NcRole",
+  "plural": "roles",
+  "base": "Role",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "users": {
+      "type": "hasMany",
+      "model": "NcUser",
+      "through": "RoleMapping",
+      "foreignKey": "roleId",
+      "keyThrough": "principalId"
+    }
+  },
+  "acls": [{
+    "accessType": "*",
+    "principalType": "ROLE",
+    "principalId": "$everyone",
+    "permission": "DENY"
+  }],
+  "methods": {},
+  "defaultPermission": "DENY"
+}

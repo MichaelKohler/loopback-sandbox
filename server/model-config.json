@@ -31,5 +31,13 @@
   "Role": {
     "dataSource": "mongodb",
     "public": false
+  },
+  "NcRole": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "NcUser": {
+    "dataSource": "mongodb",
+    "public": false
   }
 }
