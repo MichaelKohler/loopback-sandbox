@@ -4,6 +4,7 @@ var app = require(path.resolve(__dirname, '../server'));
 
 var NcUser = app.models.NcUser;
 var NcRole = app.models.NcRole;
+var RoleMapping = app.models.RoleMapping;
 
 NcUser.create([
     {username: 'John', email: 'john@doe.com', password: 'opensesame'},

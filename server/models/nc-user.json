@@ -31,12 +31,7 @@
       }
     }
   },
-  "acls": [{
-    "accessType": "*",
-    "principalType": "ROLE",
-    "principalId": "$everyone",
-    "permission": "DENY"
-  }],
+  "acls": [],
   "methods": {},
   "defaultPermission": "DENY"
 }
