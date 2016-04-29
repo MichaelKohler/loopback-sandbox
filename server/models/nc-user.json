@@ -3,7 +3,6 @@
   "plural": "users",
   "base": "User",
   "idInjection": true,
-  "activateLookup": true,
   "options": {
     "validateUpsert": true
   },
@@ -23,12 +22,7 @@
       "model": "NcRole",
       "through": "RoleMapping",
       "foreignKey": "principalId",
-      "keyThrough": "roleId",
-      "properties": {
-        "lookup": {
-          "localField": "userId"
-        }
-      }
+      "keyThrough": "roleId"
     }
   },
   "acls": [],
